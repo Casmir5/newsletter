@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+/* * {
+  border: 2px solid red;
+} */
+body {
+  background-color: #36384d;
+  font-family: "Roboto", sans-serif;
+}
+p,
+ul,
+label {
+  font-size: 13px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #b7b6d3;
+  /* background-color: white; */
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.error {
+  @apply outline outline-red-600 bg-red-500 bg-opacity-20 placeholder:text-red-600;
+}
+
+@media only screen and(max-width:600px) {
+  .page-success {
+    width: 100vh;
+    height: 100vh;
+  }
+}
