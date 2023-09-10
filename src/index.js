@@ -7,6 +7,8 @@ const pageSuccess = document.querySelector(".page-success");
 const emailInput = document.querySelector("input");
 console.log(mainPage, pageSuccess, emailEl);
 // console.log(emailEl);
+pageSuccess.classList.add("hidden");
+
 const regex =
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 

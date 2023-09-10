@@ -539,6 +539,10 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -553,6 +557,14 @@ video {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .block {
@@ -571,16 +583,16 @@ video {
   height: 100vh;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-80 {
   width: 20rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col {
@@ -593,6 +605,10 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -617,6 +633,10 @@ video {
 
 .self-start {
   align-self: flex-start;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .rounded-md {
@@ -683,6 +703,16 @@ video {
   line-height: 2.5rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -702,10 +732,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 /* * {
   border: 2px solid red;
 } */
@@ -713,6 +739,7 @@ video {
 body {
   background-color: #36384d;
   font-family: "Roboto", sans-serif;
+  /* overflow: hidden; */
 }
 
 p,
@@ -749,10 +776,32 @@ label {
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
-@media only screen and(max-width:600px) {
+/* @media only screen and(max-width:600px) {
   .page-success {
     width: 100vh;
     height: 100vh;
+  } */
+
+@media (max-width: 440px) {
+  .page-success {
+    /* width: 100vh; */
+    height: 100vh;
+  }
+
+  .sucess-content {
+    width: auto !important;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .sucess-content {
+    width: 24rem;
   }
 }
 
@@ -764,6 +813,17 @@ label {
 .placeholder\:text-sm::placeholder {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (min-width: 768px) {

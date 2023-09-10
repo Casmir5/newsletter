@@ -7,6 +7,7 @@
 body {
   background-color: #36384d;
   font-family: "Roboto", sans-serif;
+  /* overflow: hidden; */
 }
 p,
 ul,
@@ -27,9 +28,24 @@ label {
   @apply outline outline-red-600 bg-red-500 bg-opacity-20 placeholder:text-red-600;
 }
 
-@media only screen and(max-width:600px) {
+/* @media only screen and(max-width:600px) {
   .page-success {
     width: 100vh;
     height: 100vh;
+  } */
+
+@media (max-width: 440px) {
+  .page-success {
+    /* width: 100vh; */
+    height: 100vh;
+  }
+  .sucess-content {
+    width: auto !important;
+    @apply px-5 flex flex-col justify-center h-screen;
+  }
+}
+@media (max-width: 1440px) {
+  .sucess-content {
+    @apply w-96;
   }
 }
