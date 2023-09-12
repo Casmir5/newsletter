@@ -8,17 +8,14 @@ const emailInput = document.querySelector("input");
 console.log(mainPage, pageSuccess, emailEl);
 // console.log(emailEl);
 pageSuccess.classList.add("hidden");
-
 const regex =
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-emailEl.addEventListener("keyup", function () {
+validateEmail = function () {
   errorMsg.textContent = "";
   emailEl.classList.remove("error");
 
   const email = emailEl.value;
-  console.log(email);
-
   if (email.match(regex)) {
     userEmail.textcontent = email;
     submitBtn.removeAttribute("disabled");
@@ -34,9 +31,18 @@ emailEl.addEventListener("keyup", function () {
     errorMsg.textContent = "Valid input required";
     emailEl.classList.add("error");
   }
+};
+
+emailEl.addEventListener("keyup", function () {
+  validateEmail();
 });
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
+  validateEmail();
+  if (emailEl.value === "") {
+    return;
+  }
+
   mainPage.classList.add("hidden");
   pageSuccess.classList.remove("hidden");
   userEmail.textContent = emailEl.value;
