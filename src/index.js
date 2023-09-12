@@ -8,6 +8,7 @@ const emailInput = document.querySelector("input");
 console.log(mainPage, pageSuccess, emailEl);
 // console.log(emailEl);
 pageSuccess.classList.add("hidden");
+
 const regex =
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
@@ -21,9 +22,6 @@ validateEmail = function () {
     submitBtn.removeAttribute("disabled");
     submitBtn.classList.remove("bg-slate-800");
     submitBtn.classList.add("bg-red-500");
-
-    console.log("hellllo 😑");
-    console.log(submitBtn);
   } else {
     submitBtn.setAttribute("disabled", "");
     submitBtn.classList.remove("bg-red-500");
